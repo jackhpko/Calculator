@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="angular.min.js"></script>
+<style>
+.button {
+    background-color: green;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {font-size: 24px;}
+</style>
+</head>
+
+<body ng-app="myApp">
+
+<div ng-controller="home3Ctrl">
+	<p style="font-size:30px">{{output}}</p> 
+	<div>   	
+		<button class="button button1" ng-click="inputNum('7')" ng-disabled="numDisable">7</button>
+		<button class="button button1" ng-click="inputNum('8')" ng-disabled="numDisable">8</button>
+		<button class="button button1" ng-click="inputNum('9')" ng-disabled="numDisable">9</button>
+		<button class="button button1" ng-click="inputMinus()" ng-disabled="minusDisable">+/-</button>
+		<button class="button button1" ng-click="clearCal()">C</button>
+	</div>
+	<div>
+		<button class="button button1" ng-click="inputNum('4')" ng-disabled="numDisable">4</button>
+		<button class="button button1" ng-click="inputNum('5')" ng-disabled="numDisable">5</button>
+		<button class="button button1" ng-click="inputNum('6')" ng-disabled="numDisable">6</button>
+		<button class="button button1" ng-click="inputSign('-')" ng-disabled="signDisable">-</button>
+		<button class="button button1" ng-click="inputSign('*')" ng-disabled="signDisable">*</button>
+	</div>
+	<div>
+		<button class="button button1" ng-click="inputNum('1')" ng-disabled="numDisable">1</button>
+		<button class="button button1" ng-click="inputNum('2')" ng-disabled="numDisable">2</button>
+		<button class="button button1" ng-click="inputNum('3')" ng-disabled="numDisable">3</button>
+		<button class="button button1" ng-click="inputSign('+')" ng-disabled="signDisable">+</button>
+		<button class="button button1" ng-click="inputSign('/')" ng-disabled="signDisable">/</button>
+	</div>
+	<div>
+		<button class="button button1" ng-click="inputNum('0')" ng-disabled="numDisable">0</button>
+		<button class="button button1" ng-click="inputDot()" ng-disabled="dotDisable">.</button>
+		<button class="button button1" style="padding:15px 120px" ng-click="getResult()" ng-disabled="equalDisable">=</button>
+	</div>                 
+</div>
+
+
+<script src="AngularJS_HW3.js">
+</script>
+
+</body>
+</html>
